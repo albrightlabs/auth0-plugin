@@ -1,0 +1,15 @@
+{% if auth0Configured %}
+    <div class="auth0-login-section" style="margin-top: 20px;">
+        <div class="text-center" style="margin: 20px 0;">
+            <span style="color: #999;">— OR —</span>
+        </div>
+        
+        <button
+            type="button"
+            onclick="window.location.href='/auth0/login'"
+            class="{{ buttonClass ?: 'btn btn-primary btn-block' }}"
+            style="margin-bottom: 10px;">
+            <i class="icon-shield"></i> {{ buttonText ?: 'Login with Auth0' }}
+        </button>
+    </div>
+{% endif %}

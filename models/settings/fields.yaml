@@ -1,0 +1,90 @@
+fields:
+    domain:
+        label: Auth0 Domain
+        comment: Your Auth0 domain (e.g., your-tenant.auth0.com)
+        type: text
+        span: left
+        required: true
+
+    client_id:
+        label: Client ID
+        comment: Your Auth0 application client ID
+        type: text
+        span: right
+        required: true
+
+    client_secret:
+        label: Client Secret
+        comment: Your Auth0 application client secret
+        type: sensitive
+        span: left
+        required: true
+
+    callback_url:
+        label: Callback URL
+        comment: The full URL Auth0 will redirect to after authentication. Must match exactly what's configured in Auth0. Leave empty to use default.
+        type: text
+        span: right
+        placeholder: https://yoursite.com/auth0/callback
+
+    logout_url:
+        label: Logout Return URL
+        comment: The URL to redirect to after logout (leave empty for homepage)
+        type: text
+        span: left
+        placeholder: https://yoursite.com
+
+    auto_create_users:
+        label: Automatically Create Users
+        comment: Create new user accounts when users sign in with Auth0 for the first time
+        type: checkbox
+        span: full
+        default: true
+
+    sync_user_data:
+        label: Sync User Data
+        comment: Update user profile data from Auth0 on each login
+        type: checkbox
+        span: full
+        default: true
+        cssClass: field-indent
+
+    default_user_group:
+        label: Default User Group
+        comment: Automatically assign new Auth0 users to this group
+        type: dropdown
+        span: left
+        emptyOption: -- None --
+        trigger:
+            field: auto_create_users
+            action: show
+            condition: checked
+        cssClass: field-indent
+
+    section_instructions:
+        type: section
+        label: Setup Instructions
+
+    instructions:
+        type: partial
+        path: ~/plugins/albrightlabs/auth0/models/settings/_instructions.htm
+
+tabs:
+    fields:
+        stateless_mode:
+            label: Enable Stateless Mode
+            comment: Disable state verification (less secure - use only if having session/cookie issues)
+            type: checkbox
+            default: false
+            tab: Advanced
+
+        _stateless_warning:
+            type: hint
+            mode: warning
+            label: Security Warning
+            comment: Stateless mode disables CSRF protection. Only enable if you're experiencing "Invalid State" errors and can't fix the session configuration.
+            tab: Advanced
+            trigger:
+                field: stateless_mode
+                action: show
+                condition: checked

@@ -1,0 +1,41 @@
+<div class="callout callout-info">
+    <span class="d-block mb-2 fw-bold">Auth0 Configuration Steps</span>
+    <ol>
+        <li>
+            <strong>Create an Auth0 Application</strong>
+            <ul>
+                <li>Log in to your Auth0 Dashboard</li>
+                <li>Go to Applications > Create Application</li>
+                <li>Choose "Regular Web Application"</li>
+                <li>Select the appropriate technology (PHP)</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Configure Allowed Callback URLs</strong>
+            <ul>
+                <li>In your Auth0 application settings, add: <code><?= url('/auth0/callback') ?></code></li>
+                <li>Current URL: <code><strong><?= url('/auth0/callback') ?></strong></code></li>
+            </ul>
+        </li>
+        <li>
+            <strong>Configure Allowed Logout URLs</strong>
+            <ul>
+                <li>Add your site URL: <code><?= url('/') ?></code></li>
+            </ul>
+        </li>
+        <li>
+            <strong>Configure Allowed Web Origins</strong>
+            <ul>
+                <li>Add your site URL: <code><?= url('/') ?></code></li>
+            </ul>
+        </li>
+        <li>
+            <strong>Copy Your Credentials</strong>
+            <ul>
+                <li>Copy the Domain, Client ID, and Client Secret from your Auth0 application settings</li>
+                <li>Paste them into the fields above</li>
+            </ul>
+        </li>
+    </ol>
+    <p><strong>Note:</strong> Make sure to save your settings after configuring!</p>
+</div>

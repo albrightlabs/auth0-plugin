@@ -1,0 +1,33 @@
+1.0.1:
+    - First version of Auth0 Integration
+    - create_auth0_fields_in_users_table.php
+1.0.2:
+    - Create default Members user group
+    - seed_members_user_group.php
+1.0.3:
+    - Add Rhythm API profile fields to users table
+    - add_rhythm_fields_to_users.php
+1.0.4:
+    - Add status column for Rhythm user status
+    - add_status_to_users.php
+1.0.5:
+    - Add ID token field for Rhythm API authentication
+    - add_id_token_to_users.php
+1.0.6:
+    - Add Rhythm contact ID field
+    - add_rhythm_contact_id_to_users.php
+1.0.7:
+    - Add Auth0 user info fields
+    - add_auth0_user_info_to_users.php
+1.0.8:
+    - Add Rhythm Membership and Certifications data fields
+    - add_membership_certification_fields_to_users.php
+1.0.9:
+    - Increase social_avatar column length to handle long OAuth URLs
+    - increase_social_avatar_column_length.php
+1.1.0:
+    - Refactor plugin to be generic and reusable
+    - Remove CXPA-specific Rhythm and Circle.so integrations
+    - Add extension events for external plugins to hook into
+    - Clean up settings to only include Auth0 configuration
+    - Make plugin marketplace-ready for other projects
