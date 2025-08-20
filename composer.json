@@ -1,0 +1,10 @@
+{
+    "name": "albrightlabs/auth0-plugin",
+    "type": "october-plugin",
+    "description": "Auth0 integration for RainLab.User - provides SSO authentication via Auth0",
+    "require": {
+        "composer/installers": "~1.0",
+        "laravel/socialite": "^5.0",
+        "socialiteproviders/auth0": "^4.1"
+    }
+}
