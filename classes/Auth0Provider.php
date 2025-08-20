@@ -1,4 +1,4 @@
-<?php namespace AlbrightLabs\Auth0\Classes;
+<?php namespace Albrightlabs\Auth0\Classes;
 
 use Auth;
 use Event;
@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Config;
 use SocialiteProviders\Manager\Config as SocialiteConfig;
 use RainLab\User\Models\User;
 use RainLab\User\Models\UserGroup;
-use AlbrightLabs\Auth0\Models\Settings;
+use Albrightlabs\Auth0\Models\Settings;
 use October\Rain\Auth\AuthException;
 use Exception;
 use Firebase\JWT\JWT;

@@ -1,4 +1,4 @@
-<?php namespace AlbrightLabs\Auth0\Updates;
+<?php namespace Albrightlabs\Auth0\Updates;
 
 use RainLab\User\Models\UserGroup;
 use October\Rain\Database\Updates\Seeder;

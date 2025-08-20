@@ -1,8 +1,8 @@
-<?php namespace AlbrightLabs\Auth0\Components;
+<?php namespace Albrightlabs\Auth0\Components;
 
 use Cms\Classes\ComponentBase;
-use AlbrightLabs\Auth0\Models\Settings;
-use AlbrightLabs\Auth0\Classes\Auth0Provider;
+use Albrightlabs\Auth0\Models\Settings;
+use Albrightlabs\Auth0\Classes\Auth0Provider;
 use October\Rain\Exception\ApplicationException;
 use Auth;
 use Flash;

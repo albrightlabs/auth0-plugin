@@ -1,4 +1,4 @@
-<?php namespace AlbrightLabs\Auth0;
+<?php namespace Albrightlabs\Auth0;
 
 use App;
 use Event;
@@ -43,7 +43,7 @@ class Plugin extends PluginBase
     public function registerComponents()
     {
         return [
-            \AlbrightLabs\Auth0\Components\Auth0Login::class => 'auth0Login',
+            \Albrightlabs\Auth0\Components\Auth0Login::class => 'auth0Login',
         ];
     }
 
@@ -55,7 +55,7 @@ class Plugin extends PluginBase
                 'description' => 'Configure Auth0 authentication settings',
                 'category' => SettingsManager::CATEGORY_USERS,
                 'icon' => 'icon-shield',
-                'class' => \AlbrightLabs\Auth0\Models\Settings::class,
+                'class' => \Albrightlabs\Auth0\Models\Settings::class,
                 'order' => 600,
                 'permissions' => ['rainlab.users.access_settings'],
                 'size' => 'adaptive'
@@ -115,7 +115,7 @@ class Plugin extends PluginBase
     protected function registerAuthenticationEvents()
     {
         Event::listen('rainlab.user.beforeAuthenticate', function($component, $credentials) {
-            $auth0Provider = new \AlbrightLabs\Auth0\Classes\Auth0Provider();
+            $auth0Provider = new \Albrightlabs\Auth0\Classes\Auth0Provider();
             return $auth0Provider->handleBeforeAuthenticate($component, $credentials);
         });
     }
@@ -125,7 +125,7 @@ class Plugin extends PluginBase
         Route::group(['middleware' => ['web']], function () {
             Route::get('/auth0/callback', function() {
                 try {
-                    $provider = new \AlbrightLabs\Auth0\Classes\Auth0Provider();
+                    $provider = new \Albrightlabs\Auth0\Classes\Auth0Provider();
                     return $provider->handleCallback();
                 } catch (\Exception $e) {
                     // Enhanced error display when main logging fails
@@ -152,13 +152,13 @@ class Plugin extends PluginBase
                     \Session::forget('url.intended'); // Clean up the old key
                 }
                 
-                $provider = new \AlbrightLabs\Auth0\Classes\Auth0Provider();
+                $provider = new \Albrightlabs\Auth0\Classes\Auth0Provider();
                 return $provider->redirectToAuth0();
             });
 
             Route::get('/auth0/logout', function() {
                 \Auth::logout();
-                $provider = new \AlbrightLabs\Auth0\Classes\Auth0Provider();
+                $provider = new \Albrightlabs\Auth0\Classes\Auth0Provider();
                 return $provider->logout();
             });
         });

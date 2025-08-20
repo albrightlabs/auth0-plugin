@@ -1,4 +1,4 @@
-<?php namespace AlbrightLabs\Auth0\Classes;
+<?php namespace Albrightlabs\Auth0\Classes;
 
 use October\Rain\Network\Http;
 use Exception;

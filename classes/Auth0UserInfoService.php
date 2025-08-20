@@ -1,6 +1,6 @@
-<?php namespace AlbrightLabs\Auth0\Classes;
+<?php namespace Albrightlabs\Auth0\Classes;
 
-use AlbrightLabs\Auth0\Models\Settings;
+use Albrightlabs\Auth0\Models\Settings;
 use October\Rain\Network\Http;
 use Exception;
 use Log;

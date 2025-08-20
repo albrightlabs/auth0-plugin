@@ -1,4 +1,4 @@
-<?php namespace AlbrightLabs\Auth0\Models;
+<?php namespace Albrightlabs\Auth0\Models;
 
 use Model;
 use RainLab\User\Models\UserGroup;
