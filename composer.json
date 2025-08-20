@@ -5,6 +5,7 @@
     "require": {
         "composer/installers": "~1.0",
         "laravel/socialite": "^5.0",
+        "socialiteproviders/manager": "^4.0",
         "socialiteproviders/auth0": "^4.1"
     }
 }
