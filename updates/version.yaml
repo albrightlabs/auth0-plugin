@@ -31,3 +31,8 @@
     - Add extension events for external plugins to hook into
     - Clean up settings to only include Auth0 configuration
     - Make plugin marketplace-ready for other projects
+1.2.0:
+    - Add namespace field to Auth0 settings for custom claims
+    - Update Auth0Provider to support custom namespace in JWT claims
+1.2.1:
+    - Add composer.json with package dependencies
